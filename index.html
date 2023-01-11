@@ -6,6 +6,40 @@
 </head>
 
 <body>
+  <script>
+    function nightdayHandler(self){// this 로 적용 하면 오료가 걸린다 그래서 self 로 적용한
+      if(self.value === 'night'){
+      document.querySelector('body').style.backgroundColor = 'black';
+      document.querySelector('body').style.color = 'white';
+      self.value = 'day'; // 마찬가this 오류로 인해 self 로 수
+      } else {
+      document.querySelector('body').style.backgroundColor = 'white';
+      document.querySelector('body').style.color = 'black';
+      self.value = 'night'; // 마찬가this 오류로 인해 self 로 수정
+      }
+  }
+  </script>
+
+
+  </head>
+  <input type="button" value="night" onclick="
+  nightdayHandler(this);
+  ">
+  <style>
+  .js{
+     font-weight: bold;
+     color:red;
+  }
+  #first{
+  color: green;
+  }
+   span{
+     color: blue;
+   }
+
+
+
+  </style>
 <h1><a href="index.html"> 출산</a></h1>
 
 <ol>
@@ -14,7 +48,8 @@
   <li><a href="3.html">javaScript</a></li>
 </ol>
 
-  <h2>v한국 출산율 정책v</h2>
+<h2 style="background-color:coral ; color:powderblue"> 한국 <span class="js">출산율</span>
+정책3</h2>
 <a href="https://www.w3.org/TR/2011/WD-html5-20110405/"target="blank"
 title="html5 specification입니 ">안녕하세요 저는 학생입니다</a> 지금 <strong>web <u>html</u> </strong> 연습중입니다.
 
